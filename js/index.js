@@ -87,11 +87,9 @@ document.addEventListener('visibilitychange', () => {
 });
 
 
-// EL 11
+// EL 11 - Navigation preventDefault();
 
-// document.getElementsByTagName("a").addEventListener("click", function(event){
-//     event.preventDefault()
-//   });
+
 
 
 const Nlinks = Array.from(document.querySelectorAll('a'))
@@ -102,8 +100,29 @@ Nlinks.forEach(e => {
 });
 
 
+// document.getElementsByTagName("a").addEventListener("click", function(event){
+//     event.preventDefault()
+//   });
+
 // document.getElementsByTagName('a');
 //   Nlinks.addEventListener('click', (event) => {
 //     event.preventDefault();
 // });
 
+// EL 12 - Stop Propogation
+
+
+var parent = document.querySelector('.destination');
+var child = document.querySelector('.btn');
+
+parent.addEventListener('click', function(){
+    document.querySelector('.destination').style.backgroundColor = "yellow";
+    console.log("Parent clicked");
+  },true);
+
+
+  child.addEventListener('click', function(event){
+    event.stopPropagation();
+    document.querySelector('.btn').style.fontSize = "3rem";
+    console.log("Child clicked");
+  });
