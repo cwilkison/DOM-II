@@ -71,8 +71,6 @@ window.addEventListener('scroll', () =>{
 
 // EL 9
 
-
-//10.
 window.addEventListener("load", function(event) {
     return alert("Welcome to my page.");
   });
@@ -96,8 +94,16 @@ document.addEventListener('visibilitychange', () => {
 //   });
 
 
-const links = document.querySelector('a');
-  links.addEventListener('click', (event) => {
-    event.preventDefault();
+const Nlinks = Array.from(document.querySelectorAll('a'))
+Nlinks.forEach(e => {
+    e.addEventListener('click', (event) => {
+        event.preventDefault();
+    });
 });
+
+
+// document.getElementsByTagName('a');
+//   Nlinks.addEventListener('click', (event) => {
+//     event.preventDefault();
+// });
 
