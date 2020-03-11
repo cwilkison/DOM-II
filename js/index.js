@@ -71,26 +71,12 @@ window.addEventListener('scroll', () =>{
 // EL 9
 
 
+//10.
+window.addEventListener("load", function(event) {
+    return alert("Welcome to my page.");
+  });
 
-// document.addEventListener('fullscreenchange', (event) => {
 
-//     if (document.fullscreenElement) {
-//       document.style.backgroundColor = "red";
-//     } else {
-//       document.style.backgroundColor = "orange";
-//     }
-//   });
-
-// document.getElementById('body').addEventListener('fullscreenchange', (event) => {
-//     // document.fullscreenElement will point to the element that
-//     // is in fullscreen mode if there is one. If not, the value
-//     // of the property is null.
-//     if (document.fullscreenElement) {
-//       document.style.backgroundColor = "red";
-//     } else {
-//       document.style.backgroundColor = "orange";
-//     }
-//   });
 // EL 10
 
 document.addEventListener('visibilitychange', () => {
@@ -104,7 +90,13 @@ document.addEventListener('visibilitychange', () => {
 
 // EL 11
 
-document.getElementsByTagName("a").addEventListener("click", function(event){
-    event.preventDefault()
-  });
+// document.getElementsByTagName("a").addEventListener("click", function(event){
+//     event.preventDefault()
+//   });
+
+
+const links = document.querySelector('a');
+  links.addEventListener('click', (event) => {
+    event.preventDefault();
+});
 
