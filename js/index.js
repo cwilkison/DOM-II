@@ -47,7 +47,8 @@ button.addEventListener('click', event => {
 
 // EL 6 EL 7
 
-document.querySelector('.img-content').addEventListener('mousemove', () => {
+document.querySelector('.img-content').addEventListener('mousemove', event => {
+    event.stopPropagation();
     console.log('mousemove');
     document.querySelector('.img-content').style.width = "20%";
     {document.querySelector('.img-content:nth-of-type(2)').addEventListener('drag', () => {
